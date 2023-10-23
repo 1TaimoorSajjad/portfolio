@@ -89,7 +89,7 @@
     }
 
     .btn-primary {
-        @apply inline-flex items-center justify-center rounded-lg py-1.5 px-3 text-sm font-medium focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-primary-600 text-white hover:text-zinc-100 hover:bg-primary-500 active:bg-primary-800 active:text-primary-100 focus-visible:outline-primary-600;
+        @apply inline-flex items-center justify-center rounded-lg py-1.5 px-3 text-sm font-medium focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-primary-900 text-white hover:text-zinc-100 hover:bg-primary-500 active:bg-primary-800 active:text-primary-100 focus-visible:outline-primary-600;
     }
 
     .btn-outline-dark {
