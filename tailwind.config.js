@@ -34,6 +34,9 @@ module.exports = {
       },
       fontFamily: {
         'rock-salt': ['Rock Salt', 'cursive'],
+        'bentham': [ 'Bentham', 'serif'],
+        'roboto': ['Roboto Condensed', 'sans-serif']
+
       },
     },
   },

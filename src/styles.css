@@ -100,3 +100,32 @@
         @apply inline-flex ring-1 items-center justify-center rounded-lg py-1.5 px-3 text-sm font-medium focus:outline-none ring-zinc-700 text-white hover:ring-zinc-500 active:ring-zinc-700 active:text-zinc-400 focus-visible:outline-white;
     }
 }
+
+/* CSS for the flip animation */
+.flip-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
