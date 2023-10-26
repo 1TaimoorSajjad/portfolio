@@ -8,9 +8,10 @@ describe('Portfolio Website Test', () => {
   it('Should download the CV when the "Download CV" button is clicked', () => {
     // Visit the website
     cy.visit('https://portfolio-git-test-cases-taimoors7.vercel.app/'); // Replace with the correct URL
-
+    cy.wait(2000);
     // Find and click the "Download CV" button
     cy.get('#downloadCV').click();
+    cy.wait(2000);
     cy.get('#downloadCV').should('have.class', 'rounded-lg');
 
 
