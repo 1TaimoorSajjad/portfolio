@@ -2,12 +2,12 @@
 describe('Portfolio Website Test', () => {
   // Before visiting the website, you may want to set up the baseUrl if it's not already configured in your Cypress configuration.
   before(() => {
-    Cypress.config('baseUrl', 'https://taimoorsajjad.com');
+    Cypress.config('baseUrl', 'https://portfolio-git-test-cases-taimoors7.vercel.app/');
   });
 
   it('Should download the CV when the "Download CV" button is clicked', () => {
     // Visit the website
-    cy.visit('https://taimoorsajjad.com'); // Replace with the correct URL
+    cy.visit('https://portfolio-git-test-cases-taimoors7.vercel.app/'); // Replace with the correct URL
 
     // Find and click the "Download CV" button
     cy.get('#downloadCV').click();
