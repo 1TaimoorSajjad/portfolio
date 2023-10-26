@@ -3,13 +3,13 @@
         <div class="bg-white rounded-2xl p-4 sm:p-8 md:p-12">
             <dl class="grid lg:grid-cols-2 items-center gap-12">
                 <div class="flex flex-col">
-                    <h2 class="font-roboto text-4xl tracking-tight text-zinc-900 sm:text-5xl font-bold">
+                    <h2 class="font-roboto text-4xl tracking-tight text-gray-900 sm:text-5xl font-bold">
                         "Empower, Engage, Code -
                         It's All
                         About
                         Getting in Touch!"</h2>
                     <!-- <div class="mt-12"><button
-                            class="group inline-flex items-center justify-center rounded-lg py-2 sm:py-3 px-4 text-sm font-medium focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-zinc-900 text-white hover:bg-zinc-700 hover:text-zinc-100 active:bg-zinc-800 active:text-zinc-300 focus-visible:outline-zinc-900">Contact
+                            class="group inline-flex items-center justify-center rounded-lg py-2 sm:py-3 px-4 text-sm font-medium focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-900 text-white hover:bg-gray-700 hover:text-gray-100 active:bg-gray-800 active:text-gray-300 focus-visible:outline-gray-900">Contact
                             Me ~ it&#x27;s free</button></div> -->
                 </div>
                 <div class="flex flex-col">
@@ -67,10 +67,10 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-2xl p-4 sm:p-8 md:p-12 lg:p-16 grid md:grid-cols-2  gap-12">
             <div class="flex flex-col align-top">
-                <h2 class="font-roboto text-6xl tracking-tight text-zinc-900 sm:text-6xl font-bold">
+                <h2 class="font-roboto text-6xl tracking-tight text-gray-900 sm:text-6xl font-bold">
                     Have a Project ?</h2>
                 <div class="mt-6">
-                    <p class=" text-2xl text-zinc-900 ">Reach out to discuss your next project with me.</p>
+                    <p class=" text-2xl text-gray-900 font-roboto ">Reach out to discuss your next project with me.</p>
 
                 </div>
             </div>
@@ -79,7 +79,7 @@
             <div class="flex flex-col">
                 <div class="">
                     <form class="grid grid-cols-2 gap-6 sm:grid-cols-1" [formGroup]="contactForm">
-                        <div><label for="name" class="block text-sm font-semibold leading-6 text-zinc-900">Name</label>
+                        <div><label for="name" class="block text-sm font-semibold leading-6 text-gray-900">Name</label>
                             <div class="mt-2.5"><input type="text" name="name" id="name" formControlName="name" /></div>
                             <div *ngIf="form['name'].errors && isSubmit">
                                 <div *ngIf="form['name'].errors['required']" class="">
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div><label for="phoneNumber" class="block text-sm font-semibold leading-6 text-zinc-900">Phone
+                        <div><label for="phoneNumber" class="block text-sm font-semibold leading-6 text-gray-900">Phone
                                 Number</label>
                             <div class="mt-2.5"><input type="text" name="phoneNumber" id="phoneNumber"
                                     formControlName="phone" /></div>
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div><label for="email" class="block text-sm font-semibold leading-6 text-zinc-900">Email
+                        <div><label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email
                                 Address</label>
                             <div class="mt-2.5"><input type="text" name="email" id="email" formControlName="email" />
                             </div>
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div><label for="budget"
-                                class="block text-sm font-semibold leading-6 text-zinc-900">Budget</label>
+                                class="block text-sm font-semibold leading-6 text-gray-900">Budget</label>
                             <div class="mt-2.5"><select name="budget" id="budget" formControlName="budget">
                                     <option value="$500-$2000">$500-$2000</option>
                                     <option value="$2000-$4000">$2000-$4000</option>
@@ -129,7 +129,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div><label for="aboutProject" class="block text-sm font-semibold leading-6 text-zinc-900">Tell
+                        <div><label for="aboutProject" class="block text-sm font-semibold leading-6 text-gray-900">Tell
                                 me about the
                                 project?</label>
                             <div class="mt-2.5"><textarea class="h-32" name="aboutProject" id="aboutProject"
@@ -143,7 +143,7 @@
                                 </div>
                             </div>
                         </div><button (click)="onSubmit()"
-                            class="group inline-flex items-center justify-center rounded-lg py-2 sm:py-3 px-4 text-sm font-medium focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-zinc-900 text-white hover:bg-zinc-700 hover:text-zinc-100 active:bg-zinc-800 active:text-zinc-300 focus-visible:outline-zinc-900 w-full">Submit</button>
+                            class="group inline-flex items-center justify-center rounded-lg py-2 sm:py-3 px-4 text-sm font-medium focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-900 text-white hover:bg-gray-700 hover:text-gray-100 active:bg-gray-800 active:text-gray-300 focus-visible:outline-gray-900 w-full">Submit</button>
                     </form>
                 </div>
             </div>
