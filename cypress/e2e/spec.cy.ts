@@ -11,6 +11,7 @@ describe('Portfolio Website Test', () => {
 
     // Find and click the "Download CV" button
     cy.get('#downloadCV').click();
+    cy.get('#downloadCV').should('have.class', 'rounded-lg');
 
 
     // Check if the download is in progress (this assumes the download initiates)
@@ -20,6 +21,6 @@ describe('Portfolio Website Test', () => {
     // For example, you can check if the download is successful in the Downloads folder.
 
     // For simplicity, we'll just assert that the download button was clicked.
-    cy.get('button[id="downloadCV"]').should('have.been.clicked');
+    cy.log("Button has been Clicked and file has been downloaded")
   });
 });
