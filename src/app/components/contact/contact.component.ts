@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup
   isSubmit = false
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
 
   }
   ngOnInit(): void {
@@ -31,6 +32,16 @@ export class ContactComponent implements OnInit {
     this.isSubmit = true
     const payload = this.contactForm.value
     console.log("Contact Form =>", payload);
+    this.http.post('http://localhost:3000/send-email', payload).subscribe(
+      (response) => {
+        console.log('Email sent successfully', response);
+        // You can add code to show a success message or redirect the user to a thank-you page.
+      },
+      (error) => {
+        console.error('Error sending email', error);
+        // You can add code to show an error message.
+      }
+    );
 
   }
 
