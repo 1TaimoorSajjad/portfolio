@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -18,6 +19,12 @@ export class HomeComponent implements OnInit {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href="">Why do I have this issue?</a>'
+    })
 
   }
 }
