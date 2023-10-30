@@ -10,11 +10,13 @@ describe('Portfolio Website Test', () => {
     cy.wait(2000);
     cy.get('#downloadCV').click();
     cy.wait(2000);
-    cy.get('#downloadCV').should('have.class', 'rounded-lg');
+    cy.get('#downloadCV').should('have.class', 'relative');
 
 
     // You can also check the content or text within the SweetAlert
-    cy.get('swal2-title').should('contain', 'Oops...');
+    cy.get('#swal2-title').should('contain', 'Oops...');
+    cy.get('.swal2-confirm').click()
+    cy.scrollTo('top')
 
 
     // Check if the file exists
