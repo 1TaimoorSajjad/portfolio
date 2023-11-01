@@ -29,20 +29,24 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    this.isSubmit = true
-    const payload = this.contactForm.value
-    console.log("Contact Form =>", payload);
-    this.http.post('http://localhost:3000/send-email', payload).subscribe(
-      (response) => {
-        console.log('Email sent successfully', response);
-        // You can add code to show a success message or redirect the user to a thank-you page.
-      },
-      (error) => {
-        console.error('Error sending email', error);
-        // You can add code to show an error message.
-      }
-    );
+    this.isSubmit = true;
 
+    if (this.contactForm.valid) {
+      const payload = this.contactForm.value;
+
+      // Make an HTTP POST request to your backend
+      this.http.post('https://portfolio-backend-nu.vercel.app/', payload).subscribe(
+        (response) => {
+          console.log('Email sent successfully', response);
+          // Optionally, you can reset the form here.
+          this.contactForm.reset();
+        },
+        (error) => {
+          console.error('Error sending email', error);
+          // Handle the error or show an error message to the user.
+        }
+      );
+    }
   }
 
 }
